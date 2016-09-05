@@ -32,6 +32,11 @@ In this app, it allows us to read the maximum value reached by the sensor throug
 #### Sensor
 Shows the name, current value and range of the sensor defined on `ngModel`.
 
-## views
-#### Home view
-Shows the list of available sensors (default: 2). New sensors can be added by defining a name.
+## Views
+#### Home
+It shows the list of available sensors (default: 2). New sensors can be added by defining a name.
+
+#### Sensor detail
+It shows the current parameters of a given sensor, with the real time value, the minimum and maximum reached and the range for generating new sensor values.
+The range min and max can be set in the input.
+A "Clear History" button allows us to reset the sensor history, by deleting all its stored values.
