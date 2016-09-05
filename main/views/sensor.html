@@ -1,0 +1,36 @@
+<div class="nav-bar">
+	<a href="#/" class="back-button">Back</a>
+</div>
+
+<div id="sensor-view">
+	<h2>Sensor: {{::vm.sensor.name}}</h2>
+	<ul class="details-list">
+		<li class="item">
+			<span class="title">Current value: </span>
+			<span class="value current-value">{{vm.sensor.values | last}}</span>
+		</li>
+		<li class="item">
+			<span class="title">Minimum value reached: </span>
+			<span class="value">{{vm.sensor.values | minimum}}</span>
+		</li>
+		<li class="item">
+			<span class="title">Maximum value reached: </span>
+			<span class="value">{{vm.sensor.values | maximum}}</span>
+		</li>
+		<li class="item">
+			<span class="title">Range min: </span>
+			<span class="value">
+				<input type="number" ng-model="vm.sensor.min" max="{{vm.sensor.max}}">
+			</span>
+		</li>
+		<li class="item">
+			<span class="title">Range max: </span>
+			<span class="value">
+				<input type="number" ng-model="vm.sensor.max" min="{{vm.sensor.min}}">
+			</span>
+		</li>
+		<li class="item">
+			<button class="button" type="button" ng-click="vm.clearHistory(vm.sensor)">Clear history</button>
+		</li>
+	</ul>
+</div>

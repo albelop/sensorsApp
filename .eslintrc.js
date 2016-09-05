@@ -3,6 +3,9 @@ module.exports = {
         "browser": true
     },
     "extends": "eslint:recommended",
+	"globals": {
+		"angular": true
+	},
     "rules": {
         "indent": [
             "error",

@@ -1,0 +1,21 @@
+<div class="logo">
+	<img src="main/assets/logo.png" alt="Sensor Industries">
+	<h1>Sensor Industries</h1>
+</div>
+
+<div>
+	<form id="newSensorForm" name="newSensorForm" ng-submit="vm.addSensor(vm.newSensorName)">
+		<input type="text" ng-model="vm.newSensorName" placeholder="Enter a sensor name" required>
+		<button type="submit" ng-disabled="newSensorForm.$invalid">New sensor</button>
+	</form>
+</div>
+
+<nav id="home-menu">
+	<ul class="menu">
+		<li ng-repeat="sensor in vm.sensors track by $index">
+			<a ng-href="#/sensors/{{::$index}}">
+				<sensor ng-model="sensor"></sensor>
+			</a>
+		</li>
+	</ul>
+</nav>

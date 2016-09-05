@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Sensors app</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
   <link rel="stylesheet" href="main/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 
 <body ng-app="sensorsApp">
-  <h1>Hello world</h1>
+
+  <ng-view>
+
+  </ng-view>
 
 
   <!-- JS Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
 
   <!-- Custom scripts -->
   <script src="app.js"></script>
+  <script src="main/services/sensors-service.js"></script>
+  <script src="main/directives/sensor-directive.js"></script>
+  <script src="main/filters/last-filter.js"></script>
+  <script src="main/filters/maximum-filter.js"></script>
+  <script src="main/filters/minimum-filter.js"></script>
+  <script src="main/controllers/sensor-controller.js"></script>
+  <script src="main/controllers/home-controller.js"></script>
 
 </body>
 </html>
