@@ -31,3 +31,7 @@ In this app, it allows us to read the maximum value reached by the sensor throug
 ## Directives
 #### Sensor
 Shows the name, current value and range of the sensor defined on `ngModel`.
+
+## views
+#### Home view
+Shows the list of available sensors (default: 2). New sensors can be added by defining a name.
